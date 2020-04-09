@@ -19,5 +19,25 @@ Students will need to have had the following lessons before attempting this assi
 
 ## Requirements
 
+#### 1. Implement the RESTful routes listed below
 
+| HTTP Method | Path | Purpose |
+| ----------- | ------------------------ | ---------------------------------------- |
+| GET | `/` | Home page - should have a large, poker-themed image |
+| GET | `/teams` | Show a list of all teams |
+| GET | `/teams/new` | Show a form for entering a new team |
+| POST | `/teams` | Create a new team |
+| GET | `/teams/:id` | Show a detail page for a specific team |
+| PUT | `/teams/:id` | Edit a specific team |
+| DELETE | `/teams/:id` | Delete a specific team |
 
+#### 2. Set up your database
+
+* Create a new database called 'poker'
+* Set up Sequelize:
+  * `sequelize init`
+  * Update your `config.json` according to directions from your Sequelize lessons
+  
+#### 3. Create a teams model
+
+TBD
