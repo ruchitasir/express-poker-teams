@@ -70,6 +70,8 @@ Using the `sequelize-cli` tool on the command line, use the `sequelize model:cre
 
 ### 4. Create a player model
 
+**Part A**
+
 Use the `sequelize model:create` command again to create a player model that contains the following fields:
 
 | Column | Type | 
@@ -79,6 +81,14 @@ Use the `sequelize model:create` command again to create a player model that con
 | losses | integer |
 | pic | string |
 | bio | text |
+| teamId | integer |
+
+**Part B**
+
+Create the `belongsTo` and `hasMany` associations between teams and players.
+
+* One team has many players.
+* A player belongs to a team.
 
 ### 5. Run Sequelize Migrations
 
@@ -103,6 +113,10 @@ You will need to assign each player to a team when they are created. In order to
 **Part B**
 
 Implement GET and POST routes for `/players`
+
+#### 8. Make your show routes 
+
+Make a `show.ejs` for both a specific team and a specific player. These ejs pages will be rendered by `/teams/:id` and `/players/:id` respectively. On the player page, make sure to display all the information about that player's team. On the team page, show a list of all the player's names on that team. This means using our associations and using the `include` keyword when we query for the data.
 
 ## Bonus
 
