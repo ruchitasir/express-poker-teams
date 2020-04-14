@@ -17,9 +17,9 @@ Students will need to have had the following lessons before attempting this assi
 * Stop and take a moment to read through the existing code. You should have a simple express app with a wildcard route (a catch-all that renders an error page) and basic setup of express-ejs-layouts.
 * Run `nodemon` and ensure you can access that error page at `localhost:3000`.
 
-## Requirements
+## Directions
 
-#### 1. Stub the routes listed below
+#### 1. Take a look at the code already provided to you as starter code. You will find stubs of the following routes:
 
 | HTTP Method | Path | Purpose |
 | ----------- | ------------------------ | ---------------------------------------- |
@@ -28,8 +28,6 @@ Students will need to have had the following lessons before attempting this assi
 | GET | `/teams/new` | Show a form for entering a new team |
 | POST | `/teams` | Create a new team |
 | GET | `/teams/:id` | Show a detail page for a specific team |
-| POST | `/teams/:id/win` | Assign a win to each player on a team |
-| POST | `/teams/:id/lose` | Assign a loss to each player on a team |
 | GET | `/players` | Show a list of all players |
 | GET | `/players/new` | Show a form for entering new players |
 | POST | `/players` | Create a new player |
@@ -85,3 +83,5 @@ Implement these additional routes:
 | DELETE | `/teams/:id` | Delete a specific team |
 | PUT | `/players/:id` | Edit a specific player |
 | DELETE | `/players/:id` | Delete a specific player |
+| POST | `/teams/:id/win` | Assign a win to each player on a team |
+| POST | `/teams/:id/lose` | Assign a loss to each player on a team |
