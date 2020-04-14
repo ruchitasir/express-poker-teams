@@ -86,9 +86,23 @@ You can use the command `sequelize db:migrate`
 
 ### 6. Implement adding and viewing your teams
 
+**Part A**
+
 In your `new.ejs` file inside `views/teams` folder, implement a form to add a new team. Make sure your inputs have a name field that corresponds to the name in your SQL table (i.e., name, pic, and description in this case). Render this page when the url `/teams/new` is reached.
 
+**Part B**
+
 After this, implement your GET and POST routes for `/teams`. The POST route will use sequelize's `create` method (or if you don't want duplicate team names you can use `findOrCreate`). The GET route will just do a call to sequelize's `findAll` function to return all teams. Render the `views/teams/index.ejs` page to show all the team names.
+
+### 7. Implement adding and viewing players
+
+**Part A**
+
+You will need to assign each player to a team when they are created. In order to accomplish this in the most graceful way possible, let's query the `team` model and make sure to get a list of all available teams passed into the render. You can make a dropdown list or radio buttons to select the player's team. Make sure that your dropdown list or radio button's value indicates the team ID while the display to the user is the name of the team.
+
+**Part B**
+
+Implement GET and POST routes for `/players`
 
 ## Bonus
 
