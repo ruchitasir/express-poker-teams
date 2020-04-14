@@ -28,8 +28,10 @@ Students will need to have had the following lessons before attempting this assi
 | GET | `/teams/new` | Show a form for entering a new team |
 | POST | `/teams` | Create a new team |
 | GET | `/teams/:id` | Show a detail page for a specific team |
-| PUT | `/teams/:id` | Edit a specific team |
-| DELETE | `/teams/:id` | Delete a specific team |
+| GET | `/players` | Show a list of all players |
+| GET | `/players/new` | Show a form for entering new players |
+| POST | `/players` | Create a new player |
+| GET | `/players/:id` | Show a detail page for a specific player |
 
 #### 2. Set up your database
 
@@ -38,6 +40,36 @@ Students will need to have had the following lessons before attempting this assi
   * `sequelize init`
   * Update your `config.json` according to directions from your Sequelize lessons
   
-#### 3. Create a teams model
+#### 3. Create a team model
 
-TBD
+Using the `sequelize-cli` tool on the command line, use the `sequelize model:create` command to create a team model that contains the following fields:
+
+| Column | Type | 
+| ----------- | ------------------------ | 
+| name | string | 
+| description | string |
+
+
+#### 4. Create a player model
+
+Use the `sequelize model:create` command again to create a player model that contains the following fields:
+
+| Column | Type | 
+| ----------- | ------------------------ | 
+| name | string | 
+| wins | integer |
+| losses | integer |
+| pic | text |
+| bio | text |
+
+## Bonus
+
+Implement these additional routes:
+
+| HTTP Method | Path | Purpose |
+| ----------- | ------------------------ | ---------------------------------------- |
+| GET | `/` | Home page - should have a large, poker-themed image |
+| PUT | `/teams/:id` | Edit a specific team |
+| DELETE | `/teams/:id` | Delete a specific team |
+| PUT | `/players/:id` | Edit a specific player |
+| DELETE | `/players/:id` | Delete a specific player |
