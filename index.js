@@ -20,6 +20,11 @@ app.use(express.urlencoded({ extended: false }))
 // Include all routes from routers/controllers
 // TODO!
 
+// Home route
+app.get('/', (req, res) => {
+    res.render('home')
+})
+
 // Catch-all route
 app.get('*', (req, res) => {
     res.render('error')

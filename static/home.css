@@ -1,0 +1,36 @@
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color: green;
+    }
+    h1 {
+      color: white;
+    }
+    button {
+      color: white;
+      font-size: 32px;
+      background-color: red;
+      border-radius: 10px;
+    }
+  }
+
+  @media only screen and (min-width: 601px) {
+    body {
+      background: url('https://res.cloudinary.com/briezh/image/upload/v1586905321/pokerhand_jlaohz.jpg');
+      background-size: 100vw 100vh;
+    }
+    h1 {
+      color: white;
+      position: absolute;
+      bottom: 0;
+      right: 10px;
+    }
+    button {
+      color: white;
+      font-size: 32px;
+      background-color: red;
+      border-radius: 10px;
+      position: absolute;
+      right: 150px;
+      bottom: 200px;
+    }
+  }
