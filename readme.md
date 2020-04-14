@@ -19,7 +19,7 @@ Students will need to have had the following lessons before attempting this assi
 
 ## Requirements
 
-#### 1. Implement the RESTful routes listed below
+#### 1. Stub the routes listed below
 
 | HTTP Method | Path | Purpose |
 | ----------- | ------------------------ | ---------------------------------------- |
@@ -28,6 +28,8 @@ Students will need to have had the following lessons before attempting this assi
 | GET | `/teams/new` | Show a form for entering a new team |
 | POST | `/teams` | Create a new team |
 | GET | `/teams/:id` | Show a detail page for a specific team |
+| POST | `/teams/:id/win` | Assign a win to each player on a team |
+| POST | `/teams/:id/lose` | Assign a loss to each player on a team |
 | GET | `/players` | Show a list of all players |
 | GET | `/players/new` | Show a form for entering new players |
 | POST | `/players` | Create a new player |
@@ -48,7 +50,7 @@ Using the `sequelize-cli` tool on the command line, use the `sequelize model:cre
 | ----------- | ------------------------ | 
 | name | string | 
 | description | string |
-
+| pic | string |
 
 #### 4. Create a player model
 
@@ -59,8 +61,18 @@ Use the `sequelize model:create` command again to create a player model that con
 | name | string | 
 | wins | integer |
 | losses | integer |
-| pic | text |
+| pic | string |
 | bio | text |
+
+#### 5. Run Sequelize Migrations
+
+You can use the command `sequelize db:migrate`
+
+#### 6. Implement adding and viewing your teams
+
+In your `new.ejs` file inside `views/teams` folder, implement a form to add a new team. Make sure your inputs have a name field that corresponds to the name in your SQL table (i.e., name, pic, and description in this case). Render this page when the url `/teams/new` is reached.
+
+After this, implement your GET and POST routes for `/teams`. The POST route will use sequelize's `create` method (or if you don't want duplicate team names you can use `findOrCreate`). The GET route will just do a call to sequelize's `findAll` function to return all teams. Render the `views/teams/index.ejs` page to show all the team names.
 
 ## Bonus
 
