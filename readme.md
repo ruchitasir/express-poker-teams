@@ -19,9 +19,9 @@ Students will need to have had the following lessons before attempting this assi
 
 ## Directions
 
-#### 0. Take a look at the code already provided to you as starter code.
+### 0. Take a look at the code already provided to you as starter code.
 
-#### 1. Make your controllers and stub your routes
+### 1. Make your controllers and stub your routes
 
 **Part A**
 
@@ -51,14 +51,14 @@ Implement stubs (simple `res.send('xxx')` calls as placeholders) for each route 
 
 Make sure to include both controllers in your `index.js` file via the `app.use()` call.
 
-#### 2. Set up your database
+### 2. Set up your database
 
 * Create a new database called 'poker'
 * Set up Sequelize:
   * `sequelize init`
   * Update your `config.json` according to directions from your Sequelize lessons
   
-#### 3. Create a team model
+### 3. Create a team model
 
 Using the `sequelize-cli` tool on the command line, use the `sequelize model:create` command to create a team model that contains the following fields:
 
@@ -68,7 +68,7 @@ Using the `sequelize-cli` tool on the command line, use the `sequelize model:cre
 | description | string |
 | pic | string |
 
-#### 4. Create a player model
+### 4. Create a player model
 
 Use the `sequelize model:create` command again to create a player model that contains the following fields:
 
@@ -80,11 +80,11 @@ Use the `sequelize model:create` command again to create a player model that con
 | pic | string |
 | bio | text |
 
-#### 5. Run Sequelize Migrations
+### 5. Run Sequelize Migrations
 
 You can use the command `sequelize db:migrate`
 
-#### 6. Implement adding and viewing your teams
+### 6. Implement adding and viewing your teams
 
 In your `new.ejs` file inside `views/teams` folder, implement a form to add a new team. Make sure your inputs have a name field that corresponds to the name in your SQL table (i.e., name, pic, and description in this case). Render this page when the url `/teams/new` is reached.
 
