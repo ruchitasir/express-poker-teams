@@ -19,7 +19,21 @@ Students will need to have had the following lessons before attempting this assi
 
 ## Directions
 
-#### 1. Take a look at the code already provided to you as starter code. You will find stubs of the following routes:
+#### 0. Take a look at the code already provided to you as starter code.
+
+#### 1. Make your controllers and stub your routes
+
+**Part A**
+
+Make a `controllers` folder. Then put a `teams.js` and a `players.js` file inside the `controllers` folder.
+
+**Part B**
+
+Make `teams.js` and `players.js` into Express Routers. Make sure to remember the `module.exports` statement~
+
+**Part C**
+
+Implement stubs (simple `res.send('xxx')` calls as placeholders) for each route below in their respective routers. Routes starting with `/teams` should go into the `teams.js` router, routes starting with `/players` should go into the `players.js` router, and the home page route can go into `index.js`.
 
 | HTTP Method | Path | Purpose |
 | ----------- | ------------------------ | ---------------------------------------- |
@@ -32,6 +46,10 @@ Students will need to have had the following lessons before attempting this assi
 | GET | `/players/new` | Show a form for entering new players |
 | POST | `/players` | Create a new player |
 | GET | `/players/:id` | Show a detail page for a specific player |
+
+**Part D**
+
+Make sure to include both controllers in your `index.js` file via the `app.use()` call.
 
 #### 2. Set up your database
 
