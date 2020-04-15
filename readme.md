@@ -33,11 +33,11 @@ Make `teams.js` and `players.js` into Express Routers. Make sure to remember the
 
 **Part C**
 
-Implement stubs (simple `res.send('xxx')` calls as placeholders) for each route below in their respective routers. Routes starting with `/teams` should go into the `teams.js` router, routes starting with `/players` should go into the `players.js` router, and the home page route can go into `index.js`.
+Implement stubs (simple `res.send('xxx')` calls as placeholders) for each route below in their respective routers. Routes starting with `/teams` should go into the `teams.js` router, and routes starting with `/players` should go into the `players.js` router.
 
 | HTTP Method | Path | Purpose |
 | ----------- | ------------------------ | ---------------------------------------- |
-| GET | `/` | Home page - should have a large, poker-themed image |
+| GET | `/` | Home page - has a large, poker-themed image |
 | GET | `/teams` | Show a list of all teams |
 | GET | `/teams/new` | Show a form for entering a new team |
 | POST | `/teams` | Create a new team |
@@ -124,10 +124,7 @@ Implement these additional routes:
 
 | HTTP Method | Path | Purpose |
 | ----------- | ------------------------ | ---------------------------------------- |
-| GET | `/` | Home page - should have a large, poker-themed image |
 | PUT | `/teams/:id` | Edit a specific team |
 | DELETE | `/teams/:id` | Delete a specific team |
 | PUT | `/players/:id` | Edit a specific player |
 | DELETE | `/players/:id` | Delete a specific player |
-| POST | `/teams/:id/win` | Assign a win to each player on a team |
-| POST | `/teams/:id/lose` | Assign a loss to each player on a team |
