@@ -17,3 +17,14 @@ h1 {
   width: 100%;
   height: auto;
 }
+
+/* For the sticky footer */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
