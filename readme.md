@@ -1,4 +1,4 @@
-# Express Poker Teams
+cd# Express Poker Teams
 
 Let's have a class poker tournament!
 
@@ -43,7 +43,7 @@ Implement stubs (simple `res.send('xxx')` calls as placeholders) for each route 
 | POST | `/teams` | Create a new team |
 | GET | `/teams/:id` | Show a detail page for a specific team |
 | GET | `/players` | Show a list of all players |
-| GET | `/players/new` | Show a form for entering new players |
+| GET | `/players/new` | Show a form for entering new layers |
 | POST | `/players` | Create a new player |
 | GET | `/players/:id` | Show a detail page for a specific player |
 

@@ -1,1 +1,28 @@
 <h1>Add New Player</h1>
+
+<form  method="POST" action="/players">
+    Name:
+    <input type="text" name="name">
+    Wins:
+    <input type="number" name="wins">
+    Losses:
+    <input type="number" name="losses">
+    Pic:
+    <input type="text" name="pic">
+    Bio:
+    <input type="text" name="bio">
+    
+    <div class="input-field col s12">
+    Team
+        <select name="teamId" >
+            <option value="" disabled selected>Choose your team</option>
+        <% teams.forEach(t=> { %> 
+            <option value="<%=t.id%>">
+                <%=t.name %>  
+                </option>
+        <% }) %>  
+        </select>
+    </div>
+
+    <input type="submit" value ="ADD"> 
+</form>

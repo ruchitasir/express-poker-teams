@@ -1,1 +1,21 @@
 <h1>All Players</h1>
+
+
+<%   players.forEach(p=>{ %>
+    <h4>
+        Player name:  <%=p.name %> 
+    </h4>
+    <p>
+        Player wins:  <%=p.wins %> 
+    </p>
+    <p>
+        Player losses:  <%=p.losses %> 
+    </p>
+    <p>
+        Player pic:  <%=p.pic %> 
+    </p>
+    <p>
+        Player bio:  <%=p.bio %> 
+    </p>
+
+<% }) %> 
