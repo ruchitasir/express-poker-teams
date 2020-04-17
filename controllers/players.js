@@ -39,7 +39,18 @@ router.get('/new',(req,res)=>{
 })
 
 router.get('/:id', (req, res)=>{
-    res.render('players/show');
+  db.player.findOne({
+    where: {id: req.params.id},
+    include: [db.team]
+  })
+  .then(player=>{
+    res.render('players/show',{player})
+  })
+  .catch((err)=>{
+    console.log('Error',err)
+    res.render('error')
+  })
+    
 })
 
 module.exports = router

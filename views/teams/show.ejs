@@ -1,3 +1,20 @@
 <h1>Team Detail Page</h1>
 
-<h2>Member List</h2>
+<h2>
+    <strong>Team Name:</strong>
+    <%=team.name %> 
+</h2>
+<p>
+    <strong>Description:</strong>
+    <%=team.description  %> 
+</p>
+<div> 
+
+    <a href="/teams/<%=team.id%>/edit" >&rarr; Edit </a> 
+  </div>
+<h2>
+    <%=team.name %>'s Members 
+</h2>
+<% team.players.forEach(p=>{%> 
+    <p><%=p.name %> (Wins: <%= p.wins%> ) (Losses: <%= p.losses%> )</p>
+<%}) %> 

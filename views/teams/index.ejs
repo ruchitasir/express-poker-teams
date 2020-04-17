@@ -2,9 +2,15 @@
 
 <%   teams.forEach(t=>{ %>
     <h2>
-        Team name:  <%=t.name %> 
+        <a href="/teams/<%=t.id%>" class="btn-small">  Team name:  <%=t.name %>
+        </a>
     </h2>
     <h3>
         Team Description:  <%=t.description %> 
     </h3>
-<% }) %> 
+    <a href="/teams/<%=t.id%>/win" class="btn-small green">+ Win</a>
+    <a href="/teams/<%=t.id%>/loss" class="btn-small red">+ Loss</a>
+    <hr>
+    <% }) %> 
+
+

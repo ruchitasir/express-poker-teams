@@ -3,7 +3,9 @@
 
 <%   players.forEach(p=>{ %>
     <h4>
-        Player name:  <%=p.name %> 
+        <a href="/players/<%=p.id%>"> 
+            Player name:  <%=p.name %>  
+        </a> 
     </h4>
     <p>
         Player wins:  <%=p.wins %> 

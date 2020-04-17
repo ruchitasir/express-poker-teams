@@ -1,0 +1,20 @@
+<h1>Edit the teams Info</h1>
+
+<form method="POST" action="/teams/<%=team.id%>/?_method=PUT">
+  
+    <label for="name">Edit Team Name</label>
+    <input type="text" name="name" value=" <%=team.name%>" required>  
+    
+    <label for="description">Edit Description</label>
+    <textarea type="text" id="description" name="description" required>
+        <%=team.description%>
+
+    </textarea>
+    <label for="pic">Edit Team Picture</label>
+    <input type="text" name="pic" required>
+
+    <input type="hidden" id="id"  name="id" value="<%=team.id%>">
+    <input type="submit"  value="Edit">
+</form>
+<a href="/teams">&larr; Back Home</a>
+<div> 
