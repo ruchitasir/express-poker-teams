@@ -79,6 +79,29 @@ router.put('/:id',(req,res)=>{
   //res.send('put route')
 })
 
+router.delete('/:id',(req,res)=>{
+ db.player.destroy({
+   where: {teamId: req.params.id}
+ })
+ .then(()=>{
+          db.team.destroy({
+            where: {id: req.params.id}
+          })
+          .then(()=>{
+            res.redirect('/teams')
+          })
+          .catch(err=>{
+            console.log("Error in delete teams",err)
+            res.render('error')
+          })
+ })
+ .catch(err=>{
+  console.log("Error in delete teams",err)
+  res.render('error')
+ })
+
+})
+
 router.get('/:id/win',(req,res)=>{
   //res.send('win stub')
   db.player.update(
@@ -94,7 +117,7 @@ router.get('/:id/win',(req,res)=>{
   })
 
 })
-
+-
 router.get('/:id/loss',(req,res)=>{
   db.player.update(
     {losses: sequelize.literal('losses + 1')},

@@ -53,4 +53,17 @@ router.get('/:id', (req, res)=>{
     
 })
 
+router.delete('/:id',(req,res)=>{
+  db.player.destroy({
+    where: {id: req.params.id}
+  })
+  .then(()=>{
+    res.redirect('/players')
+  })
+  .catch(err=>{
+    console.log('error in delete',err)
+    res.render('error')
+  })
+})
+
 module.exports = router
