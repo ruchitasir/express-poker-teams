@@ -15,9 +15,10 @@
     Description: <%=player.team.description %> 
 </p>
 <h2>Actions</h2>
-<!--<a href="/players/<%=player.id%>?_method=DELETE" class="btn-small red">
-    Delete Player
-</a> -->
+
+<a href="/players/<%=player.id%>/edit"  class="btn-small blue lighten-2">
+    Edit Player  </a>
+
 <form method="POST" action="/players/<%=player.id%>?_method=DELETE">
     <input type="submit" class="btn small red" value="Delete Player">
 </form>

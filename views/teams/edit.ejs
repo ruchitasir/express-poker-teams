@@ -6,12 +6,9 @@
     <input type="text" name="name" value=" <%=team.name%>" required>  
     
     <label for="description">Edit Description</label>
-    <textarea type="text" id="description" name="description" required>
-        <%=team.description%>
-
-    </textarea>
+    <textarea type="text" id="description" name="description" required><%=team.description%></textarea>
     <label for="pic">Edit Team Picture</label>
-    <input type="text" name="pic" required>
+    <input type="text" name="pic" value="<%=team.pic%>" required>
 
     <input type="hidden" id="id"  name="id" value="<%=team.id%>">
     <input type="submit"  value="Edit">

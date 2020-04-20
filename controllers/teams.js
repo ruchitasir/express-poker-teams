@@ -52,7 +52,7 @@ router.get('/:id/edit',(req,res)=>{
   })
   .then(function(team) {
     if (!team) throw Error()
-    //console.log('update team',team)
+    
        res.render('teams/edit', { team: team })
     
   })
@@ -76,7 +76,7 @@ router.put('/:id',(req,res)=>{
     // do something when done updating
     res.redirect('/teams/'+req.body.id)
   })
-  //res.send('put route')
+ 
 })
 
 router.delete('/:id',(req,res)=>{
@@ -101,6 +101,7 @@ router.delete('/:id',(req,res)=>{
  })
 
 })
+
 
 router.get('/:id/win',(req,res)=>{
   //res.send('win stub')

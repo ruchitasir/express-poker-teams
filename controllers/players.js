@@ -52,7 +52,7 @@ router.get('/:id', (req, res)=>{
   })
     
 })
-
+ 
 router.delete('/:id',(req,res)=>{
   db.player.destroy({
     where: {id: req.params.id}
@@ -65,5 +65,41 @@ router.delete('/:id',(req,res)=>{
     res.render('error')
   })
 })
+
+router.put('/:id',(req,res)=>{
+  console.log(req.body)
+  db.player.update(
+    req.body, 
+    {where: {id: req.params.id}}
+  )
+  .then(()=>{
+      res.redirect('/players/'+req.params.id)
+  })
+  .catch(function(error) {
+    console.log(error)
+    res.status(400).render('main/404')
+  })
+})
+
+router.get('/:id/edit',(req,res)=>{
+  db.team.findAll()
+  .then(teams=>{
+     db.player.findOne({
+       where: {id: req.params.id}
+     })
+     .then(player=>{
+       res.render('players/edit',{ teams, player })
+     })
+     .catch(function(error) {
+       console.log(error)
+       res.status(400).render('main/404')
+     })
+  })
+  .catch(function(error) {
+   console.log(error)
+   res.status(400).render('main/404')
+ })
+})
+
 
 module.exports = router

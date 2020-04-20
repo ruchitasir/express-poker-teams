@@ -1,0 +1,27 @@
+<h1>Edit player</h1>
+
+<form  method="POST" action="/players/<%=player.id%>?_method=PUT">
+    Name:
+    <input type="text" name="name" value="<%=player.name%>">
+    Wins:
+    <input type="number" name="wins" value="<%=player.wins%>">
+    Losses:
+    <input type="number" name="losses" value="<%=player.losses%>">
+    Pic:
+    <input type="text" name="pic" value="<%=player.pic%> ">
+    Bio:
+    <input type="text" name="bio" value="<%=player.bio%> ">
+    
+    <div class="input-field col s12">
+    Team
+    <select name="teamId" >
+        <% teams.forEach(t=> { %> 
+            <option value="<%=t.id%>" <%= (t.id == player.teamId)? 'selected' : "" %> >
+                    <%=t.name %>  
+            </option>
+        <% }) %>  
+    </select>
+    </div>
+
+    <input type="submit" value ="Edit"> 
+</form>
